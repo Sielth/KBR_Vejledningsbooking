@@ -7,5 +7,7 @@ namespace KBR_Vejledningsbooking.Models
 {
     public class Studerende
     {
+        public int StudieID { get; }
+
     }
 }
