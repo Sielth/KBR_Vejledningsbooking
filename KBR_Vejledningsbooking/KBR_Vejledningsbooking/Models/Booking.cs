@@ -7,7 +7,7 @@ namespace KBR_Vejledningsbooking.Models
 {
     public class Booking
     {
-        public int BookingID;
+        public int BookingID { get; }
 
     }
 }

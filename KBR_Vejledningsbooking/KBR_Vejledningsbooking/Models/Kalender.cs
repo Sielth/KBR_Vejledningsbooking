@@ -7,8 +7,8 @@ namespace KBR_Vejledningsbooking.Models
 {
     public class Kalender
     {
-        public int KalenderID;
-        public Bookingvindue bookingvindue;
-        public Hold hold;
+        public int KalenderID { get; }
+        public Bookingvindue bookingvindue { get; set; }
+        public Hold hold { get; set; }
     }
 }
