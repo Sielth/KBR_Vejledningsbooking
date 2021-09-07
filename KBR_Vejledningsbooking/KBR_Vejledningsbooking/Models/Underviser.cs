@@ -7,7 +7,7 @@ namespace KBR_Vejledningsbooking.Models
 {
     public class Underviser
     {
-        public int UnderviserID;
-        public Kalender kalender;
+        public int UnderviserID { get; }
+        public Kalender kalender { get; set; }
     }
 }

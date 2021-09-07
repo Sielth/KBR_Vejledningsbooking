@@ -7,6 +7,6 @@ namespace KBR_Vejledningsbooking.Models
 {
     public class Bookingvindue
     {
-        public int BookingvindueID;
+        public int BookingvindueID { get; }
     }
 }

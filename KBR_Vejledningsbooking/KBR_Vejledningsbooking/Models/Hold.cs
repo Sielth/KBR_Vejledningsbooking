@@ -7,6 +7,6 @@ namespace KBR_Vejledningsbooking.Models
 {
     public class Hold
     {
-        public int HoldID;
+        public int HoldID { get; }
     }
 }
