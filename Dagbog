@@ -3,3 +3,11 @@ Vi har oprettet et repository på github. Lavet en domæne model samt implemente
 
 09-09-2021:
 Vi har lavet SQL kode til databasen, hostet en database, samt diskuteret hvordan vi vil lave projektet herfra.
+
+
+Vores tanker omkring hvordan vi vil udvikle systemet:
+Vi vil lave vores kalender med et 2 dimensionelt array bestående af alle datoerne for en måned.
+Når man vælger en dato, vil vi lave et bookingvindue der indeholder tiderne som kan bookes den pågældende dag. Man vil her i første omgang kunne booke en time af gangen inden for en given periode fx mellem 8-16.
+
+Yderligere overvejelser:
+Vi har overvejet, hvorvidt en underviser skal have en kalender pr. hold eller blot én kalender som alle underviserens hold kan tilgå - for at forhindre at der kan ske dobbeltbookinger.
