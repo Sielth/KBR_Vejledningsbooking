@@ -1,0 +1,43 @@
+CREATE TABLE Underviser (
+UnderviserID int identity(1,1) PRIMARY KEY,
+Enavn varchar(15),
+Fnavn varchar(15)
+)
+
+CREATE TABLE Kalender (
+KalenderID int identity(1,1) PRIMARY KEY,
+Månedsnavn varchar(15),
+BookingvindueID int NOT NULL,
+HoldID int NOT NULL,
+UnderviserID int NOT NULL,
+FOREIGN KEY (BookingvindueID) REFERENCES Bookingvindue (BookingvindueID),
+FOREIGN KEY (HoldID) REFERENCES Hold (HoldID),
+FOREIGN KEY (Underviser) REFERENCES Underviser (UnderviserID)
+)
+
+CREATE TABLE Hold (
+HoldID int identity(1,1) PRIMARY KEY
+)
+
+CREATE TABLE Bookingvindue (
+BookingvindueID int identity(1,1) PRIMARY KEY,
+KalenderID int NOT NULL,
+FOREIGN KEY (KalenderID) REFERENCES Kalender (KalenderID)
+)
+
+CREATE TABLE Booking (
+BookingID int identity(1,1) PRIMARY KEY,
+BookingTime int,
+StudieID int,
+BookingvindueID int NOT NULL,
+FOREIGN KEY (StudieID) REFERENCES Studerende (StudieID),
+FOREIGN KEY (BookingvindueID) REFERENCES Bookingvindue (BookingvindueID)
+)
+
+CREATE TABLE Studerende (
+StudieID int identity(1,1) PRIMARY KEY,
+Enavn varchar(15),
+Fnavn varchar(15),
+HoldID int NOT NULL,
+FOREIGN KEY (HoldID) REFERENCES Hold (HoldID),
+)
